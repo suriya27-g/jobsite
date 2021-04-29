@@ -1,0 +1,44 @@
+
+{% load static %}
+
+{% block content %}
+
+<style>
+
+    .ftstyle{
+        font-family: sans-serif;
+        font-size: large;
+    }
+
+    .nvstyle{
+        width: 30%;
+        height: 40%;
+    }
+ 
+    .btnstyle{
+      background-color: rgb(4, 138, 228);
+    }
+</style>
+
+<div class="container">
+<nav class="navbar navbar-light navbar-expand-lg p-5">
+    <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo1.png' %}" class="nvstyle d-flex"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <br>
+        <a class="nav-item nav-link active font-weight-bold ftstyle border border-white" style="color: rgb(4, 138, 228);" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="#"></a>
+        <a class="nav-item nav-link active font-weight-bold ftstyle border border-white" style="color: rgb(4, 138, 228);" href="{% url 'intern' %}">Intenship</a>
+        <a class="nav-item nav-link active" href="#"></a>
+        <a class="nav-item nav-link active font-weight-bold ftstyle border border-white" style="color: rgb(4, 138, 228);" href="#">About</a>
+        <a class="nav-item nav-link active" href="#"></a>
+        <a class="nav-item nav-link active font-weight-bold ftstyle btnstyle btn btn-white" href="#" style="color: white;">Signin</a>
+      </div>
+    </div>
+</nav>
+</div>
+
+{% endblock %}

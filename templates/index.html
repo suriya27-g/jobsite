@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+<style>
+    .titlestyle{
+        text-align: center;
+    }
+
+    .card {
+        box-shadow: 0 0 30px 0 rgba(100, 100, 100, 0.26);
+    }  
+
+    .imgstyle{
+        width: 40%;
+        height: 10%;
+    }
+</style>
+<div class="container">
+    <center>
+        <img src="{% static 'images/career1.svg' %}" class="imgstyle">
+    </center>
+</div>
+<br>
+<br>
+    <div class="container d-flex">
+        <div class="row mx-auto d-flex">
+            <div class="col-6 col-sm-4 card mx-auto">
+                <div class="card-body"  style="color: rgb(4, 138, 228);">
+                    <h2 class="card-title titlestyle">On-Campus</h2>
+                    <p class="card-text text-muted h6"></p>
+                    <p class="card-text titlestyle">On campus details are listed here, Click view button to see the full list.</p>
+                    <center><a href="{% url 'on-campus' %}" class="btn btn-outline-primary" style="border-radius: 19px;">View List &rarr;</a></center>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 card mx-auto">
+                <div class="card-body" style="color: rgb(4, 138, 228);">
+                    <h2 class="card-title titlestyle">Off-Campus</h2>
+                    <p class="card-text text-muted h6"></p>
+                    <p class="card-text titlestyle">Off campus details are listed here, Click view button to see the full list.</p>
+                    <center><a href="{% url 'off-campus' %}" class="btn btn-outline-primary" style="border-radius: 19px;">View List &rarr;</a></center>
+                </div>
+            </div> 
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Off-Campus
+{% endblock %}
+
+{% block content %}
+<style>
+    .thstyle{
+        background-color: rgb(131, 184, 245);
+    }
+</style>
+
+    <div class="container">
+        <nav class="navbar">
+            <form class="form-inline mx-auto">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+    <br>
+    <div class="container">
+        <table class="table">
+            <thead class="thead thstyle">
+                <tr>
+                    <th scope="col">Date & Time</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><a class="btn btn-primary" href="#" role="button">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
